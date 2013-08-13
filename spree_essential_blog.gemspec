@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency('spree_essentials',    '~> 0.5.0')
+  s.add_runtime_dependency('spree_essentials',    '~> 1.2.0')
   s.add_runtime_dependency('acts-as-taggable-on', '~> 2.2.0')
   
   s.add_development_dependency('shoulda',      '~> 3.0.0')
@@ -26,7 +26,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency('factory_girl', '~> 2.6.0')
   s.add_development_dependency('capybara',     '~> 1.1.2')
   s.add_development_dependency('sqlite3',      '~> 1.3.5')
-  # s.add_development_dependency('simplecov',    '~> 0.6.1')
-  # s.add_development_dependency('turn',         '~> 0.9.3')
-
 end
