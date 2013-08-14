@@ -2,6 +2,10 @@
     Post Archive
 */
 
+.more{
+  margin-top: 0px;
+}
+
 .posts {
   position: relative;
 }
@@ -79,6 +83,9 @@
   clear: both;
   padding-bottom: 1em;
   border-bottom: 1px solid #ddd;
+}
+.post-preview:not(:first-child) {
+  padding-top: 2em;
 }
 .post-preview h2 {
   margin-bottom: 0;
