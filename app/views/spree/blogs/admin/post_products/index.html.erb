@@ -7,8 +7,13 @@
   <p class="field">
     <label>
       Choose products
-      <%= product_picker_field "post[product_ids_string]", @post.product_ids_string %>
     </label>
+    <%= f.select :product_ids, 
+      Spree::Product.all.map { |p| [p.name, p.id] }, 
+      {include_blank: true}, 
+      multiple: true,
+      class: 'select2 fullwidth' 
+    %>
   </p>
   
   <p class="actions">

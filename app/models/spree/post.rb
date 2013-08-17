@@ -1,6 +1,6 @@
 class Spree::Post < ActiveRecord::Base
   
-  attr_accessible :blog_id, :title, :teaser, :body, :posted_at, :author, :live, :tag_list, :post_category_ids, :product_ids_string
+  attr_accessible :blog_id, :title, :teaser, :body, :posted_at, :author, :live, :tag_list, :post_category_ids, :product_ids_string, :product_ids
   
   acts_as_taggable
 
@@ -12,7 +12,7 @@ class Spree::Post < ActiveRecord::Base
   
   belongs_to :blog, :class_name => "Spree::Blog"
   has_many :post_products, :dependent => :destroy
-  has_many :products, :through => :post_products
+  has_many :products, :through => :post_products, :class_name => "Spree::Product"
   has_many :images, :as => :viewable, :class_name => "Spree::PostImage", :order => :position, :dependent => :destroy
   
   validates :blog_id, :title, :presence => true
